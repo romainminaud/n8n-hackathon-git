@@ -1,0 +1,14 @@
+{
+  "createdAt": "2023-03-30T14:46:50.465Z",
+  "updatedAt": "2023-03-30T14:46:57.000Z",
+  "id": "14",
+  "name": "Test2",
+  "active": false,
+  "nodes": [],
+  "connections": {},
+  "settings": {},
+  "staticData": null,
+  "pinData": {},
+  "versionId": "7cc2d76f-b10f-413f-bb3b-04e7e1b6f31c",
+  "triggerCount": 0
+}
