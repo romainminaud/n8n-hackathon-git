@@ -1,0 +1,61 @@
+{
+  "createdAt": "2023-04-18T08:09:55.291Z",
+  "updatedAt": "2023-04-18T12:48:32.000Z",
+  "id": "1",
+  "name": "My workflow",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "de6368c7-7070-4af8-9e29-06edb2557f14",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        340,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "=POST",
+        "url": "={{ process.env.WEBSITE_URL }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "8ffc2fc1-e703-4a4c-8c80-42a3891653bd",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        640,
+        380
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "1",
+          "name": "Header Auth account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "staticData": null,
+  "pinData": {},
+  "versionId": "c7bfa7d9-3ff0-4a0e-b195-71ae7f94a779",
+  "triggerCount": 0
+}
